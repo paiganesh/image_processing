@@ -104,3 +104,4 @@ if '__name__' == '__main__':
     matrix = np.array(range(1,704381)).reshape((820,859))
     scanned_array  = zigzag_scan(matrix)
     inverse_matrix = zigzag_scan_inverse(scanned_array, matrix.shape[:2])
+    np.all(matrix==inverse_matrix)
